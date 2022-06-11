@@ -47,7 +47,7 @@ fs.readFile(pathPasswordFile, { encoding: 'utf-8' }, (err, data) => {
  */
 const createLastpassCSV = (websites) => {
   let output = 'url,username,password,totp,extra,name,grouping,fav\n';
-  const pathOutputFile = path.resolve(__dirname, 'output.txt');
+  const pathOutputFile = path.resolve(__dirname, 'output.csv');
 
   websites.forEach((website) => {
     output += `"${website.url}","${website.username}","${website.password}",,"${website.extra}","${website.name}",,0\n`;
